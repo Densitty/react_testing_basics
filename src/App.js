@@ -1,9 +1,23 @@
+import { useState } from "react";
 import "./App.css";
 
 function App() {
+  const [backgroundColor, setBackgroundColor] = useState("red");
+  const [text, setText] = useState("Blue");
+
+  const clickHandler = (e) => {
+    setBackgroundColor("blue");
+    setText("Red");
+  };
+
   return (
     <div>
-      <button style={{ backgroundColor: "red" }}>Change to blue</button>
+      <button
+        onClick={clickHandler}
+        style={{ backgroundColor: backgroundColor }}
+      >
+        Change to {text}
+      </button>
     </div>
   );
 }
