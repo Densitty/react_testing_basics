@@ -31,7 +31,13 @@ function App() {
       </button>
 
       <div>
-        <input onChange={checkHandler} type="checkbox" checked={disabled} />
+        <label htmlFor="disable-button-checkbox">Disable Button</label>
+        <input
+          id="disable-button-checkbox"
+          onChange={checkHandler}
+          type="checkbox"
+          checked={disabled}
+        />
       </div>
     </div>
   );
