@@ -24,7 +24,7 @@ function App() {
     <div>
       <button
         onClick={clickHandler}
-        style={{ backgroundColor: backgroundColor }}
+        style={{ backgroundColor: `${disabled ? "grey" : backgroundColor}` }}
         disabled={disabled}
       >
         Change to {text}
